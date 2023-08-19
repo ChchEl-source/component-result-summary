@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* primary colors */
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients colors
+    /* for background : */
+
+    --Light-slate-blue-: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    /* for circle */
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* about styling the component container */
+.component-container {
+    width: calc(100% - 30%);
+    max-width: calc(1440px - 50%);
+    margin: 20% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--Pale-blue);
+}
+
+.result-container,
+.summary-container {
+    width: 50%;
+    height: 350px;
+    padding: 5%;
+
+}
+
+/* styling the result (bg blue) space */
+
+.result-container {
+
+    background: linear-gradient(var(--Light-slate-blue-), var(--Light-royal-blue));
+    border-radius: 20px;
+    color: var(--Light-lavender);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.result-container header h2 {
+    font-size: 1.1rem;
+}
+
+.appreciation-section h3,
+#result-bground-circle span {
+    color: var(--white);
+    font-weight: 700;
+}
+
+
+#result-bground-circle {
+    position: relative;
+    z-index: 2;
+    margin: 15%;
+}
+
+#result-bground-circle span {
+    font-size: 3rem;
+}
+
+/* making of the circle */
+
+#result-bground-circle::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: max(120px);
+    height: max(120px);
+    border-radius: 50%;
+    top: -1.4rem;
+    left: -2.3rem;
+    padding: 5px;
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue) 95%);
+}
+
+.appreciation-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+}
+
+.appreciation-section p {
+    font-size: 0.99rem;
+    letter-spacing: 2%;
+    opacity: 60%;
+}
+
+/* Summary section styles */
+
+
+.summary-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    gap: 10px;
+
+}
+
+.scores-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
+
+.actual-points, .scale-points{
+    vertical-align: middle;
+}
+
+.actual-points{
+    color: var(--Dark-gray-blue);
+    font-weight: 700;
+}
+.scale-points{
+    color: var(--Dark-gray-blue);
+    opacity: 0.4;
+    font-weight: 700;
+}
+
+.topic{
+    display: flex;
+    gap: 5px;
+}
+
+/* specifics */
+
+.scores-container.red{
+    background-color: hsla(0, 100%, 67%, 0.09);
+    color: var(--Light-red);
+}
+
+.scores-container.yellow{
+    background-color: hsla(39, 100%, 56%, 0.1); 
+    color: var(--Orangey-yellow);
+}
+
+.scores-container.green{
+    background-color:hsla(166, 100%, 37%, 0.1) ;
+    color: var(--Green-teal);
+}
+
+.scores-container.blue{
+background-color:hsla(234, 85%, 45%, 0.09);
+;
+color: var(--Cobalt-blue);
+}
+
+/* button */
+
+.btn-continue{
+    width: 100%;
+    padding: 10px 20px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--Dark-gray-blue);
+    color: var(--white);
+    border-radius: 16px;;
+}
+
+/* footer */
+
+.attribution{
+    width: 50%;
+    margin: auto;
+    padding:  20px;
+}
+
+/* media queries */
+
+@media screen and (max-width: 500px) {
+    .component-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .result-container,
+    .summary-container {
+        width: 100%;
+    }
+
+    .result-container {
+        height: min-content;
+        border-radius: 0 0 20px 20px;
+        padding-bottom: 5%;
+    }
+
+}
