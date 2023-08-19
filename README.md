@@ -14,4 +14,4 @@ This challenge is to build out this results summary component and get it looking
 
 Mostly used HTML & CSS.
 
-Your users should be able to:
+images(./assets/images/FireShot Capture 002 - Frontend Mentor - Results summary component - chchel-source.github.io.png)
