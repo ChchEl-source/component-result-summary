@@ -45,9 +45,8 @@ a{
 }
 /* about styling the component container */
 .component-container {
-    width: calc(100% - 30%);
+    width: 70%;
     max-height: calc(100vh - 70%);
-    max-width: calc(1440px - 70%);
     margin: 20% auto;
     display: flex;
     justify-content: space-between;
@@ -223,12 +222,28 @@ color: var(--Cobalt-blue);
 
 /* media queries */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 960px) {
+   
+   .component-container{
+       min-width: 550px;
+
+   }
+    
+}
+
+@media screen and (min-width: 1000px) {
+
+    .component-container{
+        width: 600px;
+    }
+    
+}
+
+@media screen and (max-width: 580px) {
     .component-container {
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
-        height: 100%;
         margin: 0 auto;
     }
 
@@ -245,8 +260,23 @@ color: var(--Cobalt-blue);
 
 
     .summary-container{
-        margin-top: 10px;
-        min-height: 90vh;
-       max-height: 100vh;
+        padding: 5% 10%;
+       gap: 1rem;
+       height: 100%;
     }
+
+    .scores-container, .btn-continue {
+        font-size: 1.4rem;
+    }
+
+    .scores-container img{
+        width: 1.4rem;
+
+    }
+
+.btn-continue{
+    padding: 5% 10%;
+    border-radius: 99px;
+}
+
 }
