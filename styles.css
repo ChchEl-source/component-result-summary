@@ -234,7 +234,8 @@ color: var(--Cobalt-blue);
 @media screen and (min-width: 1000px) {
 
     .component-container{
-        width: 600px;
+        min-width: 600px;
+        max-width: 66%;
     }
     
 }
